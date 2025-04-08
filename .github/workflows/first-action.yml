@@ -1,0 +1,20 @@
+# Give your file a name, the key for the file name must be 'name'
+# namme: can be spelt/typed however you like
+name: First Workflow
+
+# Add an event. You can add many events 
+# Event starts with the key and must be "on"
+on: workflow_dispatch
+
+# YAML works with newlines and tabbed indets to associate
+jobs:
+  first-job: # First job identifier: first-job now relates to jobs
+    # Runners have different enviroments, for better viewing:
+    # https://docs.github.com/en/actions/using-github-hosted-runners/using-github-hosted-runners/about-github-hosted-runners
+    runs-on: ubuntu-latest
+    steps: 
+      # Give your steps a name to associate steps easier
+      - name: Print greeting
+        run: echo "Hello World!"
+      - name: Print goodbye
+        run: echo "Done - Goodbye!"
